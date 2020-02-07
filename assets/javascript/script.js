@@ -3,49 +3,49 @@
 *   VARIABLES
 =====================================================================  
 */
-var userPasswordCriteria; //For now!!
+var cryptoPasswordBtn = document.querySelector( "#generateCrypto" );
 
-  //Object "cryptoPassword" with all password criteria
-  var cryptoPassword = {
-    validCriteria: false,
-    hasVowels: false,
-    hasConsonants: false,
-    hasLowerCase: false,
-    hasUpperCase: false,
-    hasNumbers: false,
-    hasSpecialCharacters: false,
-    maxLength: 0,
+//Object "cryptoPassword" with all password criteria
+var cryptoPassword = {
+  validCriteria:        false,
+  hasVowels:            false,
+  hasConsonants:        false,
+  hasLowerCase:         false,
+  hasUpperCase:         false,
+  hasNumbers:           false,
+  hasSpecialCharacters: false,
+  maxLength:                0,
 
-    "alphabet": {
-      "vowels": {
-        lowerVowelsArray: [
-          "a","e", "i", "o", "u"
-        ],
+  "alphabet": {
+    "vowels": {
+      lowerVowelsArray: [
+        "a","e", "i", "o", "u"
+      ],
 
-        upperVowelsArray: [
-          "A", "E", "I", "O", "U"
-        ]
-      },
-
-      "consonants": {
-        lowerConsonantsArray: [
-          "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"
-        ],
-
-        upperConsonantsArray: [
-          "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"
-        ]
-      }
+      upperVowelsArray: [
+        "A", "E", "I", "O", "U"
+      ]
     },
 
-    "numbersArray": [
-      "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
-    ],
+    "consonants": {
+      lowerConsonantsArray: [
+        "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"
+      ],
 
-    "specialCharactersArray": [
-      "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "}", "[", "]", "|", "<", ">", "?", "/"
-    ],
-  }
+      upperConsonantsArray: [
+        "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"
+      ]
+    }
+  },
+
+  "numbersArray": [
+    "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
+  ],
+
+  "specialCharactersArray": [
+    "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "}", "[", "]", "|", "<", ">", "?", "/"
+  ],
+}
 
 
 /*
@@ -59,7 +59,7 @@ function setPasswordCriteria() {
   var cryptoSpeaking = false;
   
   // ALERT - Crypto Intro 
-  alert ( "Hi, there!! \nI'm Crypto and I will be helping you generate a new password today. \nPlease, follow the steps and let's get cracking!" );
+  alert ( "Hi, there!! \nI'm Crypto and I will be helping you generate a new password today. \nPlease, follow the steps and let's get started!" );
   
   // ALERT - Ask if user wants Password WITH Vowels
   if ( confirm ( "Would you like your password to have vowels? \n( Example: a, e, i, o, u )" ) ) {
@@ -116,7 +116,7 @@ function setPasswordCriteria() {
     // Verify if user type a valid number  
     if ( cryptoPassword.maxLength === 0 )
     {
-      alert ( "I am sorry, but it looks like we have a little problem around here. This field only accepts numbers from 8 to 128. \nDon't worry, I am here for you. Let's try it again!" );
+      alert ( "I'm sorry, but it looks like we have a little problem around here. This field only accepts numbers from 8 to 128. \nDon't worry, I'm here for you. Let's try it again!" );
     }
 
   } while ( cryptoPassword.maxLength === 0 );
@@ -161,45 +161,29 @@ function getCryptoPasswordArray() {
   var criteriaArray = "";
   var userPassword  = "";
 
-  /*
-  ===================================================================== 
-  *   VOWELS
-  =====================================================================  
-  */
-  //LowerCase
+  /* ============================ VOWELS =========================== */ 
+  // LowerCase
   if ( ( cryptoPassword.hasVowels ) && ( cryptoPassword.hasLowerCase ) )
     criteriaArray += cryptoPassword.alphabet.vowels.lowerVowelsArray.join('');
 
-  //UpperCase
+  // UpperCase
   if ( ( cryptoPassword.hasVowels ) && ( cryptoPassword.hasUpperCase ) )
     criteriaArray += cryptoPassword.alphabet.vowels.upperVowelsArray.join('');
 
-  /*
-  ===================================================================== 
-  *   CONSONANTS
-  =====================================================================  
-  */
-  //LowerCase
+  /* =========================== CONSONANTS ========================= */ 
+  // LowerCase
   if ( ( cryptoPassword.hasConsonants ) && ( cryptoPassword.hasLowerCase ) ) 
     criteriaArray += cryptoPassword.alphabet.consonants.lowerConsonantsArray.join('');
 
-  //UpperCase
+  // UpperCase
   if ( ( cryptoPassword.hasConsonants ) && ( cryptoPassword.hasUpperCase ) ) 
     criteriaArray += cryptoPassword.alphabet.consonants.upperConsonantsArray.join('');
 
-  /*
-  ===================================================================== 
-  *   NUMBERS
-  =====================================================================  
-  */
+  /* ============================ NUMBERS ========================== */ 
   if ( cryptoPassword.hasNumbers ) 
     criteriaArray += cryptoPassword.numbersArray.join('');
   
-  /*
-  ===================================================================== 
-  *   SPECIAL CHARACTERS
-  =====================================================================  
-  */
+  /* ====================== SPECIAL CHARACTERS ===================== */
   if ( cryptoPassword.hasSpecialCharacters )
     criteriaArray += cryptoPassword.specialCharactersArray.join('');
 
@@ -213,36 +197,33 @@ function getCryptoPasswordArray() {
   return userPassword;
 }
 
+function generateCryptoPassword() {
+  console.log ( "entrou na funcao GENERATE CRYPTO PASSWORD" )
+
+  // Initializes by setting all the variables in the object "cryptoPassword"
+  setPasswordCriteria();
+
+  // Veritfy if it is possible to generate a Password and if user didn't give up of doing so
+  if ( cryptoPassword.validCriteria ) {
+    let userPasswordCriteria = getCryptoPasswordArray();
+
+    //REMOVE AFTER
+    console.log ( "userPasswordCriteria = " + userPasswordCriteria );
+    console.log ( "Length of userPasswordCriteria = " + userPasswordCriteria.length );
+
+    let cryptoTextArea       = document.querySelector ( "#cryptoPasswordText" ); 
+
+    cryptoTextArea.value = userPasswordCriteria;
+  }
+}
+
 
 /*
 ===================================================================== 
 *   MAIN PROCESS
 =====================================================================  
 */
-//Test
-setPasswordCriteria();
-
-// veritfy if it is possible to generate a Password
-if ( cryptoPassword.validCriteria )
-  userPasswordCriteria = getCryptoPasswordArray();
-
-  console.log ( "userPasswordCriteria = "           + userPasswordCriteria );
-  console.log ( "Length of userPasswordCriteria = " + userPasswordCriteria.length );
-
-// ==============================================================================
-// ==============================================================================
-
-// Assignment Code
-// var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
-
-// Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+// Add event listener to generate Crypto Password
+cryptoPasswordBtn.addEventListener( "click", () => generateCryptoPassword() );
+//or
+//cryptoPasswordBtn.addEventListener( "click", generateCryptoPassword );
