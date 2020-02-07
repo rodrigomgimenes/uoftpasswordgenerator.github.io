@@ -3,9 +3,10 @@
 *   VARIABLES
 =====================================================================  
 */
+// Referencing my button to generate the Crypto Password 
 var cryptoPasswordBtn = document.querySelector( "#generateCrypto" );
 
-//Object "cryptoPassword" with all password criteria
+//Object "cryptoPassword" with all password's criteria
 var cryptoPassword = {
   validCriteria:        false,
   hasVowels:            false,
@@ -115,20 +116,10 @@ function setPasswordCriteria() {
 
     // Verify if user type a valid number  
     if ( cryptoPassword.maxLength === 0 )
-    {
       alert ( "I'm sorry, but it looks like we have a little problem around here. This field only accepts numbers from 8 to 128. \nDon't worry, I'm here for you. Let's try it again!" );
-    }
 
   } while ( cryptoPassword.maxLength === 0 );
 
-  //REMOVE AFTER
-  console.log ( "Has Vowels = "             + cryptoPassword.hasVowels            );
-  console.log ( "Has Consonants = "         + cryptoPassword.hasConsonants        );
-  console.log ( "Has Lower Case Letters = " + cryptoPassword.hasLowerCase         );
-  console.log ( "Has Upper Case Letters = " + cryptoPassword.hasUpperCase         );
-  console.log ( "Has Numbers = "            + cryptoPassword.hasNumbers           );
-  console.log ( "Has Special Characters = " + cryptoPassword.hasSpecialCharacters );
-  console.log ( "Password Length = "        + cryptoPassword.maxLength            );
 
   // Verify if none of the options were selected
   if ( 
@@ -147,17 +138,14 @@ function setPasswordCriteria() {
                                "And for that reason, I was not able to move foward with it. \nWould you like to start again?" ) )
       setPasswordCriteria();
     else
-    {
       alert ( "Okay. You can definitely do this another time. \nHave a wonderful day! \nSee you soon!! =]" );
-      return;
-    }
   }
   else
     cryptoPassword.validCriteria = true; // This variable indicates that it is possible to generate a Password
 }
 
 function getCryptoPasswordArray() {
-  // Cleaning the variable before using
+  // Cleaning variables before using
   var criteriaArray = "";
   var userPassword  = "";
 
@@ -198,22 +186,15 @@ function getCryptoPasswordArray() {
 }
 
 function generateCryptoPassword() {
-  console.log ( "entrou na funcao GENERATE CRYPTO PASSWORD" )
-
   // Initializes by setting all the variables in the object "cryptoPassword"
   setPasswordCriteria();
 
   // Veritfy if it is possible to generate a Password and if user didn't give up of doing so
   if ( cryptoPassword.validCriteria ) {
     let userPasswordCriteria = getCryptoPasswordArray();
-
-    //REMOVE AFTER
-    console.log ( "userPasswordCriteria = " + userPasswordCriteria );
-    console.log ( "Length of userPasswordCriteria = " + userPasswordCriteria.length );
-
     let cryptoTextArea       = document.querySelector ( "#cryptoPasswordText" ); 
 
-    cryptoTextArea.value = userPasswordCriteria;
+    cryptoTextArea.value     = userPasswordCriteria;
   }
 }
 
@@ -224,6 +205,4 @@ function generateCryptoPassword() {
 =====================================================================  
 */
 // Add event listener to generate Crypto Password
-cryptoPasswordBtn.addEventListener( "click", () => generateCryptoPassword() );
-//or
-//cryptoPasswordBtn.addEventListener( "click", generateCryptoPassword );
+cryptoPasswordBtn.addEventListener( "click", () => generateCryptoPassword() ); // or (another way to code): cryptoPasswordBtn.addEventListener( "click", generateCryptoPassword );
