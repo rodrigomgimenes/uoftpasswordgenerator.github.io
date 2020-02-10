@@ -61,10 +61,24 @@ var cryptoPassword = {
 *   FUNCTIONS
 =====================================================================  
 */
+// This function clear all the criteria variables
+function clearCriteria() {
+  cryptoPassword.validCriteria        = false;
+  cryptoPassword.hasVowels            = false;
+  cryptoPassword.hasConsonants        = false;
+  cryptoPassword.hasLowerCase         = false;
+  cryptoPassword.hasUpperCase         = false;
+  cryptoPassword.hasNumbers           = false;
+  cryptoPassword.hasSpecialCharacters = false;
+  cryptoPassword.maxLength            = 0;
+}
+
 // This function set all the criteria features that the user wants to
 function setPasswordCriteria() {
-  var passwordLength;
+  var passwordLength = 0;
   var cryptoSpeaking = false;
+
+  clearCriteria();
   
   // ALERT - Crypto Intro 
   alert ( "Hi, there!! \nI'm Crypto and I will be helping you generate a new password today. \nPlease, follow the steps and let's get started!" );
