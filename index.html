@@ -1,239 +1,246 @@
 <!DOCTYPE HTML>
-<!DOCTYPE html>
 <html lang="en">
-	<head>
+<head>
 
-		<!--- Basic Page Needs
-		 ================================================== -->
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="description" content="Homework 03 - Password Generator using Javascript">
-		<meta name="author" content="Rodrigo M. Gimenes">
-		
-		<title>Password Generator with Javascript</title>
-	
-		<!--- Adding Viewport element
-		 ================================================== -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--- Basic Page Needs
+ 	 ================================================== -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="description" content="Homework 03 - Password Generator using Javascript">
+	<meta name="author" content="Rodrigo M. Gimenes">
 
-		<!-- CSS
-		 ================================================== -->
-		<link rel="stylesheet" href="./assets/css/fonts.css">
+	<title>Password Generator with Javascript</title>
 
-		<!-- Favicons
-		 ================================================== -->
-		<link rel="shortcut icon" href="./assets/css/favicon/locker.ico" />
-	
-	</head>
+	<!-- CSS
+	 ================================================== -->
+	<link rel="stylesheet" href="css/fonts.css">
+ 	<noscript>
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-desktop.css" />
+	</noscript>
 
-	<body>
+	<!-- Favicons
+ 	 ================================================== -->
+	<link rel="shortcut icon" href="favicon/locker.ico" />
 
-		<!-- Header
-		 ================================================== -->
-		<div id="header-wrapper">
-			<header class="container">
+	<!-- Javascript - Responsiveness
+ 	 ================================================== -->
+	<script src="javascript/jquery.min.js"></script>
+	<script src="javascript/skel.min.js"></script>
+	<script src="javascript/init.js"></script>
+
+</head>
+
+<body class="homepage">
+
+	<!-- Header
+	 ================================================== -->
+	<div id="header-wrapper">
+		<header id="header" class="container">
 				
-				<!-- ==================== My Logo ===================== -->
-				<div id="logo">
-					<h1><a href="index.html"><i class="fa fa-lock"></i>		Crypto</a></h1>
-				</div> <!-- end of #logo -->
+			<!-- ==================== My Logo ===================== -->
+			<div id="logo">
+				<h1><a href="index.html" class="icon fa-lock">		Crypto</a></h1>
+			</div> <!-- end of #logo -->
 					
-			</header> <!-- end of Header -->
-		</div> <!-- end of #header-wrapper -->
+		</header> <!-- end of Header -->
+	</div> <!-- end of #header-wrapper -->
+	
+
+	<!-- Banner
+	 ================================================== -->
+	<div id="banner-wrapper">
+		<div id="banner" class="box container">
+			<div class="row">
+
+				<div class="7u">
+					<h2>Hello! This is Crypto.</h2>
+					<p>A free app that generates a random password based on your own criteria.</p>
+				</div>
+					
+				<div class="5u">
+					<ul>
+						<li><a href="password.html" class="button big icon fa-arrow-circle-right">Let's do it</a></li>
+						<li><a href="#main-wrapper" class="button alt big icon fa-info-circle">More info</a></li>
+					</ul>
+				</div>
+
+			</div> <!-- end of .row -->
+		</div> <!-- end of #banner -->
+	</div> <!-- end of #banner-wrapper-->
+
 		
-		<!-- Banner
-		 ================================================== -->
-		<div id="banner-wrapper">
-			<div id="banner">
-				<div class="row">
-
-					<div>
-						<h2>Hello! This is Crypto.</h2>
-						<p>A free app that generates a random password based on your own criteria.</p>
-					</div>
+	<!-- Features
+	 ================================================== -->
+	<div id="features-wrapper">
+		<div class="container">
+			<div class="row">
 					
-					<div>
-						<ul>
-							<li><a href="password.html" class="button fa-arrow-circle-right">Let's do it</a></li>
-							<li><a href="#main-wrapper" class="button fa-question-circle">More info</a></li>
-						</ul>
-					</div>
+				<div class="4u">
+					<!-- ================= Image & TextBox ================ -->
+					<section class="box feature">
+						<img class="image featured" src="images/Screenshot001.png" alt="picture001" height="360px" width="500px"/>
+						<div class="inner">
 
-				</div> <!-- end of .row -->
-			</div> <!-- end of #banner -->
-		</div> <!-- end of #banner-wrapper-->
-		
-		<!-- Features
-		 ================================================== -->
-		<div id="features-wrapper">
-			<div class="container">
-				<div class="row">
-					
-					<div>
-						<!-- ================= Image & TextBox ================ -->
-						<section>
-							<a href="#"><img src="./assets/css/image/Screenshot001.png" alt="picture001" height="360px" width="500px"/></a>
-							<div>
-
-								<header>
-									<h2>Protect your Computer</h2>
-									<p><i>With Crypto you can protect yourself from any threats.</i></p>
-								</header>
-
-								<p>
-									Imagine what would happen if your computer suddenly suffered a threat of any kind. Would you lose any important documents, 
-									photos, or other files?
-								</p>
-
-								<p>
-									Luckily, you can prevent this by creating a top security password provided by <strong>Crypto</strong>.
-								</p>
-
-							</div>
-						</section> <!-- end of Section -->
-					</div>
-						
-					<div>
-						<!-- ================= Image & TextBox ================ -->
-						<section>
-							<a href="#"><img src="./assets/css/image/Screenshot002.png" alt="picture002" height="360px" width="500px" /></a>
-							<div>
-
-								<header>
-									<h2>Secure your Mobile Device</h2>
-									<p><i>Crypto also cares about all your devices. So, you don't have to worry about them.</i></p>
-								</header>
-
-								<p>
-									But what about the other devices? Is it possible to create and|or use the same password for them? Yes!! Even mobile devices are 
-									not safe from being a target nowadays.
-								</p>
-
-								<p>
-									In fact, you have to be extremely careful with them since they keep all your personal information and data. For that reason, 
-									<strong>Crypto</strong> is the right choice for you.
-								</p>
-
-							</div>
-						</section> <!-- end of Section -->
-					</div>
-
-					<div>
-						<!-- ================= Image & TextBox ================ -->
-						<section>
-							<a href="#"><img src="./assets/css/image/Screenshot003.png" alt="picture003" height="360px" width="500px" /></a>
-							<div>
-
-								<header>
-									<h2>Oh, and finally ...</h2>
-									<p><i>You can always count on us. We are here to help you in every possible way.</i></p>
-								</header>
-
-								<p>
-									Having a <strong>strong password</strong> can be the difference between having your devices' data stolen and having a completely safe environment. 
-									So it’s vital that you identify your needs and wants and create a unique password that satisfies them. 
-								</p>
-								
-								<p>	
-									Passwords vary with features, efficiency, level of security and much more - our tool can be used to help you pick which solution best 
-									suits you.
-								</p>
-								
-								<p>
-									<strong>Your support</strong> is deeply appreciated by us.
-								</p>
-
-							</div> 
-						</section>  <!-- end of Section -->
-					</div>
-
-				</div> <!-- end of .row -->
-			</div> <!-- end of .container -->
-		</div> <!-- end of #features-wrapper -->
-
-		<!-- Content
-		 ================================================== -->
-		<div id="main-wrapper">
-			<div class="container">
-				<div class="row">
-					<div>
-
-						<div>
-							<section>
-
-								<h2>Tell me more about it...</h2>
-
-								<p>
-									This is <strong>Crypto</strong>, a free application that generates a random password based on user-selected criteria. 
-									This app runs in the browser and features dynamically updated HTML and CSS powered by JavaScript code. It also features 
-									a clean and polished user interface and it is fully responsive, adapting to multiple screen sizes.
-								</p>
-
-								<p>
-									Crypto is designed by <a href="https://drive.google.com/file/d/10E9XbKa7nnS6K3atCBDJxdgFb4lUfJUJ/view" target="_blank">RMG</a> 
-									and released under the <a href="https://bootcamp.learn.utoronto.ca/" target="_blank">UofT Bootcamp rules</a>, so feel free to 
-									use it for any personal or commercial purpose you might have.
-								</p>
-
-								<a href="password.html" class="button fa-arrow-circle-right">Let's get started</a>
-
-							</section>   <!-- end of Section -->
-						</div>
-
-					</div>
-				</div>  <!-- end of .row -->
-			</div>  <!-- end of .container -->
-		</div>  <!-- end of #main-wrapper -->
-
-		<!-- Footer
-		 ================================================== -->
-		<div id="footer-wrapper">
-			<footer id="footer" class="container">
-
-				<div class="row">
-					<div><!-- Reserved for future contents --></div>
-
-					<div>
-						<!-- ==================== Contact ===================== -->
-						<section>
-
-							<h3>Contact Us</h3>
-
-							<ul>
-								<li><a href="https://www.linkedin.com/" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://www.facebook.com/" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="https://twitter.com/?lang=en" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://www.instagram.com/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://www.pinterest.ca/" target="_blank" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-								<li><a href="https://www.youtube.com/" target="_blank" class="icon fa-youtube-play"><span class="label">YouTube</span></a></li>
-								<li><a href="https://www.google.com/" target="_blank" class="icon fa-google"><span class="label">Google</span></a></li>
-								<li><a href="https://www.tumblr.com/" target="_blank" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
-							</ul>  <!-- end of Social Media Links -->
+							<header>
+								<h2>Protect your Computer</h2>
+								<p><i>With Crypto you can protect yourself from any threats.</i></p>
+							</header>
 
 							<p>
-								<span><i class="fa fa-map-marker"></i>  123 Up n'Down St.<br /></span>
-								<span>  Toronto, ON 000 000 CA</span><br />
-								<span><i class="fa fa-phone"></i>   (416) 123 - 4567</span><br />
-							</p> <!-- end of .address -->
-				
-						</section> <!-- end of Section -->
-					</div>
-				</div>  <!-- end of .row -->
-					
-				<div class="row">
-					<div>
-						<!-- =================== Copyright ==================== -->
-						<div id="copyright">
-							<ul>
-								<li>&copy; Copyright 2020. All rights reserved</li>
-								<li>Design by RMG</a></li>
-							</ul>
-						</div> <!-- end of #copyright -->
-					</div>
-				</div> <!-- end of .row -->
-				
-			</footer> <!-- end of Footer -->
-		</div>  <!-- end of .footer-wrapper -->
+								Imagine what would happen if your computer suddenly suffered a threat of any kind. Would you lose any important documents, 
+								photos, or other files?
+							</p>
 
-	</body>
+							<p>
+								Luckily, you can prevent this by creating a top security password provided by <strong>Crypto</strong>.
+							</p>
+
+						</div> <!-- end of .inner -->
+					</section> <!-- end of Section -->
+				</div>
+						
+				<div class="4u">
+					<!-- ================= Image & TextBox ================ -->
+					<section class="box feature">
+						<img class="image featured" src="images/Screenshot002.png" alt="picture002" height="360px" width="500px" />
+						<div class="inner">
+
+							<header>
+								<h2>Secure your Mobile Device</h2>
+								<p><i>Crypto also cares about all your devices. So, you don't have to worry about them.</i></p>
+							</header>
+
+							<p>
+								But what about the other devices? Is it possible to create and|or use the same password for them? Yes!! Even mobile devices are 
+								not safe from being a target nowadays.
+							</p>
+
+							<p>
+								In fact, you have to be extremely careful with them since they keep all your personal information and data. For that reason, 
+								<strong>Crypto</strong> is the right choice for you.
+							</p>
+
+						</div> <!-- end of .inner -->
+					</section> <!-- end of Section -->
+				</div>
+
+				<div class="4u">
+					<!-- ================= Image & TextBox ================ -->
+					<section class="box feature last">
+						<img class="image featured" src="images/Screenshot003.png" alt="picture003" height="360px" width="500px" />
+						<div class="inner">
+
+							<header>
+								<h2>Oh, and finally ...</h2>
+								<p><i>You can always count on us. We are here to help you in every possible way.</i></p>
+							</header>
+
+							<p>
+								Having a <strong>strong password</strong> can be the difference between having your devices' data stolen and having a completely safe environment. 
+								So it’s vital that you identify your needs and wants and create a unique password that satisfies them. 
+							</p>
+								
+							<p>	
+								Passwords vary with features, efficiency, level of security and much more - our tool can be used to help you pick which solution best 
+								suits you.
+							</p>
+								
+							<p>
+								<strong>Your support</strong> is deeply appreciated by us.
+							</p>
+
+						</div> <!-- end of .inner -->
+					</section>  <!-- end of Section -->
+				</div>
+
+			</div> <!-- end of .row -->
+		</div> <!-- end of .container -->
+	</div> <!-- end of #features-wrapper -->
+
+
+	<!-- Content
+	 ================================================== -->
+	<div id="main-wrapper">
+		<div class="container">
+			<div class="row">
+				<div id="content">
+					<section class="last">
+
+						<h2>Tell me more about it...</h2>
+
+						<p>
+							This is <strong>Crypto</strong>, a free application that generates a random password based on user-selected criteria. 
+							This app runs in the browser and features dynamically updated HTML and CSS powered by JavaScript code. It also features 
+							a clean and polished user interface and it is fully responsive, adapting to multiple screen sizes.
+						</p>
+
+						<p>
+							Crypto is designed by <a href="https://drive.google.com/file/d/10E9XbKa7nnS6K3atCBDJxdgFb4lUfJUJ/view" target="_blank">RMG</a> 
+							and released under the <a href="https://bootcamp.learn.utoronto.ca/" target="_blank">UofT Bootcamp rules</a>, so feel free to 
+							use it for any personal or commercial purpose you might have.
+						</p>
+
+						<a href="password.html" class="button icon fa-arrow-circle-right">Let's get started</a>
+
+					</section>   <!-- end of Section -->
+				</div> <!-- end of #content -->
+
+			</div>  <!-- end of .row -->
+		</div>  <!-- end of .container -->
+	</div>  <!-- end of #main-wrapper -->
+	
+
+	<!-- Footer
+	 ================================================== -->
+	<div id="footer-wrapper">
+		<footer id="footer" class="container">
+
+			<div class="row">
+				<div class="9u"><!-- Reserved for future contents, but basically to push Contact to the left --></div>
+
+				<div class="3u">
+					<!-- ==================== Contact ===================== -->
+					<section class="widget contact last">
+
+						<h3>Contact Us</h3>
+
+						<ul>
+							<li><a href="https://www.linkedin.com/" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.facebook.com/" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://twitter.com/?lang=en" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.instagram.com/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.pinterest.ca/" target="_blank" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+							<li><a href="https://www.youtube.com/" target="_blank" class="icon fa-youtube-play"><span class="label">YouTube</span></a></li>
+							<li><a href="https://www.google.com/" target="_blank" class="icon fa-google"><span class="label">Google</span></a></li>
+							<li><a href="https://www.tumblr.com/" target="_blank" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+						</ul>  <!-- end of Social Media Links -->
+
+						<p>
+							<span><i class="fa fa-map-marker"></i>  123 Up n'Down St.<br /></span>
+							<span>  Toronto, ON 000 000 CA</span><br />
+							<span><i class="fa fa-phone"></i>   (416) 123 - 4567</span><br />
+						</p> <!-- end of .address -->
+				
+					</section> <!-- end of Section -->
+				</div>
+			</div>  <!-- end of .row -->
+					
+			<div class="row">
+				<div class="12u">
+					<!-- =================== Copyright ==================== -->
+					<div id="copyright">
+						<ul  class="menu">
+							<li>&copy; Copyright 2020. All rights reserved</li>
+							<li>Design by RMG</a></li>
+						</ul>
+					</div> <!-- end of #copyright -->
+				</div>
+			</div> <!-- end of .row -->
+				
+		</footer> <!-- end of Footer -->
+	</div>  <!-- end of .footer-wrapper -->
+
+</body>
 </html>
