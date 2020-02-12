@@ -199,7 +199,7 @@ function getCryptoPasswordArray() {
 
   // Takes the Maximum Length chosen by user to generate the password
   for ( let index = 0; index < cryptoPassword.maxLength; index++ ) {
-    userPassword += criteriaArray [ Math.floor( Math.random() * criteriaArray.length ) ];
+    userPassword += criteriaArray [ Math.floor( Math.random() * (criteriaArray.length - 1) ) ];
   }
 
 
